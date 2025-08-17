@@ -187,4 +187,58 @@ inventions_2025 = {
 
 inventions = pd.DataFrame(inventions_2025)
 
+# fictional
+inventions['invention_costs'] = [
+    50,
+    300,
+    180,
+    25,
+    40,
+    1200,
+    250,
+    400,
+    8000,
+    10,
+    1800,
+    1500,
+    50,
+    200,
+    50000,
+    30000,
+    700, 
+    400
+]
+
+# fictional
+inventions['invention_profit'] = [
+    2000000,
+    10000000,
+    5000000,
+    8000000,
+    6000000,
+    15000000,
+    4000000,
+    7000000,
+    20000000,
+    3000000,
+    12000000,
+    9000000,
+    25000000,
+    5000000,
+    40000000,
+    35000000,
+    6000000,
+    15000000
+]
+
 print(inventions)
+
+sorted_inventions = inventions.sort_values(by='invention_profit',
+                                           ascending=False)
+
+print(sorted_inventions)
+
+inventions_us_jp = inventions[(inventions['Country_Region'] == 'United States')
+                              | (inventions['Country_Region'] == 'Japan')]
+
+print(inventions_us_jp)
