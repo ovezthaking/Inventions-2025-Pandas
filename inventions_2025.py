@@ -242,3 +242,11 @@ inventions_us_jp = inventions[(inventions['Country_Region'] == 'United States')
                               | (inventions['Country_Region'] == 'Japan')]
 
 print(inventions_us_jp)
+
+print(inventions.info())
+print(inventions.describe())
+
+inventions = inventions.rename(
+    columns={"invention_costs": "inventions_costs (per unit)"})
+
+print(inventions)
