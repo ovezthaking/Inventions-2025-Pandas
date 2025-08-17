@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 inventions_2025 = {
     "Invention": [
         "Electric Salt Spoon", 
@@ -182,4 +185,6 @@ inventions_2025 = {
 }
 
 
+inventions = pd.DataFrame(inventions_2025)
 
+print(inventions)
